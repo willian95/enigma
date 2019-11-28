@@ -1,8 +1,5 @@
-c:\users\willian\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
 c:\users\willian\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
 c:\users\willian\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
-c:\users\willian\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
-c:\users\willian\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
 c:\users\willian\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
 c:\users\willian\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
 c:\users\willian\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
@@ -18,3 +15,6 @@ C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\Windo
 C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.eliminarUsuario.resources
 C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.codificacionMensaje.resources
 C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.menuUsuario.resources
+C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.decodificacionMensaje.resources
+C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.consultaMensaje.resources
+C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.GenerateResource.Cache

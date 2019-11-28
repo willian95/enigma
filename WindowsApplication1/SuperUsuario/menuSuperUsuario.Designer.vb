@@ -27,14 +27,18 @@ Partial Class menuSuperUsuario
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(285, 132)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(265, 133)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(119, 13)
+        Me.Label1.Size = New System.Drawing.Size(158, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Menu de Super Usuario"
         '
@@ -65,6 +69,15 @@ Partial Class menuSuperUsuario
         Me.Button3.Text = "Cambiar contraseña Super Usuario"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(22, 69)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 12
+        Me.Button4.Text = "Atrás"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'menuSuperUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -72,11 +85,13 @@ Partial Class menuSuperUsuario
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(484, 462)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "menuSuperUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "menuSuperUsuario"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -86,4 +101,5 @@ Partial Class menuSuperUsuario
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

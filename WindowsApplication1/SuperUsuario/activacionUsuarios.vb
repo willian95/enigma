@@ -13,12 +13,21 @@ Public Class activacionUsuarios
             Else
 
                 Dim conexion As String
-                conexion = "Data Source=WILLIAN-PC\SQLEXPRESS;Initial Catalog=ENIGMA000;Integrated Security=True"
+                Dim conectar As conectionTxt
+                Dim conexionTxt As String
+                conectar = New conectionTxt
+
+                conexionTxt = conectar.readTxt()
+                conexion = conexionTxt
                 Dim cn As New SqlConnection
                 cn.ConnectionString = conexion
 
                 Dim estado As String
-                estado = estadoCmb.SelectedIndex
+                If estadoCmb.SelectedIndex = 0 Then
+                    estado = "A"
+                Else
+                    estado = "I"
+                End If
 
                 Dim params(4) As SqlParameter
 
@@ -55,6 +64,22 @@ Public Class activacionUsuarios
 
                 If params(3).Value.ToString = "200" Then
 
+                    Dim obj As Object
+                    Dim archivo As Object
+
+                    obj = CreateObject("Scripting.FileSystemObject")
+                    If Dir("./respuesta.txt") <> "" Then
+                        My.Computer.FileSystem.DeleteFile("./respuesta.txt")
+                    End If
+
+                    archivo = obj.CreateTextFile("./respuesta.txt", True, True)
+                    archivo.WriteLine(params(4).Value.ToString)
+                    archivo.close()
+
+                    identificacionTxt.Text = ""
+                    mensajeLbl.Text = ""
+                    estadoCmb.SelectedIndex = 0
+
                     Me.Hide()
                     Form1.Show()
 
@@ -72,5 +97,33 @@ Public Class activacionUsuarios
         End If
 
 
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+        identificacionTxt.Text = ""
+        estadoCmb.SelectedIndex = 0
+
+        Me.Hide()
+        Form1.Show()
+    End Sub
+
+    Private Sub activacionUsuarios_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        If Dir("./usuario.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./usuario.txt")
+        End If
+        If Dir("./respuesta.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./respuesta.txt")
+        End If
+        If Dir("./clave.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./clave.txt")
+        End If
+        If Dir("./grupo.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./grupo.txt")
+        End If
+    End Sub
+
+    Private Sub activacionUsuarios_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        estadoCmb.SelectedIndex = 0
     End Sub
 End Class

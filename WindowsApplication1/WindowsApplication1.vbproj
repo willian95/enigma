@@ -48,6 +48,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -84,6 +87,7 @@
     <Compile Include="Administrador\registroUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="cambiarClave.Designer.vb">
       <DependentUpon>cambiarClave.vb</DependentUpon>
     </Compile>
@@ -143,6 +147,18 @@
     <Compile Include="Usuario\codificacionMensaje.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Usuario\consultaMensaje.Designer.vb">
+      <DependentUpon>consultaMensaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\consultaMensaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\decodificacionMensaje.Designer.vb">
+      <DependentUpon>decodificacionMensaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\decodificacionMensaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Usuario\menuUsuario.Designer.vb">
       <DependentUpon>menuUsuario.vb</DependentUpon>
     </Compile>
@@ -184,11 +200,18 @@
     <EmbeddedResource Include="Usuario\codificacionMensaje.resx">
       <DependentUpon>codificacionMensaje.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\consultaMensaje.resx">
+      <DependentUpon>consultaMensaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\decodificacionMensaje.resx">
+      <DependentUpon>decodificacionMensaje.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuario\menuUsuario.resx">
       <DependentUpon>menuUsuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

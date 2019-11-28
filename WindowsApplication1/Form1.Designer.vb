@@ -29,15 +29,13 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.mensajeLbl = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(281, 294)
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Button1.Location = New System.Drawing.Point(306, 303)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(132, 48)
         Me.Button1.TabIndex = 0
@@ -46,22 +44,26 @@ Partial Class Form1
         '
         'usuarioTxt
         '
-        Me.usuarioTxt.Location = New System.Drawing.Point(299, 163)
+        Me.usuarioTxt.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.usuarioTxt.Location = New System.Drawing.Point(342, 199)
         Me.usuarioTxt.Name = "usuarioTxt"
         Me.usuarioTxt.Size = New System.Drawing.Size(130, 20)
         Me.usuarioTxt.TabIndex = 1
         '
         'claveTxt
         '
-        Me.claveTxt.Location = New System.Drawing.Point(299, 226)
+        Me.claveTxt.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.claveTxt.Location = New System.Drawing.Point(342, 262)
         Me.claveTxt.Name = "claveTxt"
+        Me.claveTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.claveTxt.Size = New System.Drawing.Size(131, 20)
         Me.claveTxt.TabIndex = 2
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(234, 163)
+        Me.Label1.Location = New System.Drawing.Point(277, 199)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 3
@@ -70,8 +72,9 @@ Partial Class Form1
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(243, 229)
+        Me.Label2.Location = New System.Drawing.Point(286, 265)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 4
@@ -80,46 +83,23 @@ Partial Class Form1
         'mensajeLbl
         '
         Me.mensajeLbl.AutoSize = True
-        Me.mensajeLbl.Location = New System.Drawing.Point(138, 394)
+        Me.mensajeLbl.Location = New System.Drawing.Point(33, 396)
         Me.mensajeLbl.Name = "mensajeLbl"
         Me.mensajeLbl.Size = New System.Drawing.Size(0, 13)
         Me.mensajeLbl.TabIndex = 5
         '
-        'Button2
+        'Label3
         '
-        Me.Button2.Location = New System.Drawing.Point(31, 158)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(131, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Menu Administrador"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(31, 216)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(131, 23)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Menu SuperUsuario"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(31, 279)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(131, 23)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Menu Usuario"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(31, 336)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(131, 23)
-        Me.Button5.TabIndex = 9
-        Me.Button5.Text = "prueba"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(315, 143)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(123, 17)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Control de Acceso"
         '
         'Form1
         '
@@ -128,10 +108,7 @@ Partial Class Form1
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(484, 462)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.mensajeLbl)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -139,6 +116,7 @@ Partial Class Form1
         Me.Controls.Add(Me.usuarioTxt)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -150,9 +128,6 @@ Partial Class Form1
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents mensajeLbl As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class

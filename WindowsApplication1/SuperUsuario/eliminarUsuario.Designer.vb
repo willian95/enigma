@@ -28,14 +28,18 @@ Partial Class eliminarUsuario
         Me.identificacionTxt = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.mensajeLbl = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(275, 204)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 13)
+        Me.Label1.Size = New System.Drawing.Size(111, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Eliminar Usuario"
         '
@@ -72,6 +76,15 @@ Partial Class eliminarUsuario
         Me.mensajeLbl.Size = New System.Drawing.Size(0, 13)
         Me.mensajeLbl.TabIndex = 4
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(17, 76)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "Atrás"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'eliminarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -79,12 +92,14 @@ Partial Class eliminarUsuario
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(484, 462)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.mensajeLbl)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.identificacionTxt)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "eliminarUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "eliminarUsuario"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -95,4 +110,5 @@ Partial Class eliminarUsuario
     Friend WithEvents identificacionTxt As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents mensajeLbl As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

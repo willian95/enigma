@@ -28,14 +28,18 @@ Partial Class menuUsuario
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(276, 145)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(265, 148)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 13)
+        Me.Label1.Size = New System.Drawing.Size(119, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Menu del Usuario"
         '
@@ -75,6 +79,15 @@ Partial Class menuUsuario
         Me.Button4.Text = "Cambiar contraseña del usuario"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(21, 72)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 12
+        Me.Button5.Text = "Atrás"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'menuUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -82,12 +95,14 @@ Partial Class menuUsuario
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(484, 462)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "menuUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "menuUsuario"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -98,4 +113,5 @@ Partial Class menuUsuario
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
 End Class
