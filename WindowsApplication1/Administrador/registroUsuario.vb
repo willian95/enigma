@@ -43,8 +43,10 @@ Public Class registroUsuario
 
         command.Parameters.AddRange(params)
 
+        My.Application.DoEvents()
         cn.Open()
 
+        command.CommandTimeout = 0
         command.ExecuteReader()
         mensajeLbl.Text = params(4).Value.ToString
 
@@ -59,6 +61,7 @@ Public Class registroUsuario
             Dim obj As Object
             Dim archivo As Object
 
+            My.Application.DoEvents()
             obj = CreateObject("Scripting.FileSystemObject")
             If Dir("./respuesta.txt") <> "" Then
                 My.Computer.FileSystem.DeleteFile("./respuesta.txt")

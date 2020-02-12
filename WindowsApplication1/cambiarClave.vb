@@ -58,6 +58,7 @@ Public Class cambiarClave
 
         cn.Open()
 
+        command.CommandTimeout = 0
         command.ExecuteReader()
         mensajeLbl.Text = params(6).Value.ToString
 

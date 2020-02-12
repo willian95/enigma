@@ -46,9 +46,10 @@ Public Class codificacionMensaje
         command.CommandText = "ENCODE"
 
         command.Parameters.AddRange(params)
-
+        My.Application.DoEvents()
         cn.Open()
 
+        command.CommandTimeout = 0
         command.ExecuteReader()
         mensajeLbl.Text = params(6).Value.ToString
 
@@ -65,6 +66,7 @@ Public Class codificacionMensaje
             Dim obj As Object
             Dim archivo As Object
 
+            My.Application.DoEvents()
             obj = CreateObject("Scripting.FileSystemObject")
             If Dir("./respuesta.txt") <> "" Then
                 My.Computer.FileSystem.DeleteFile("./respuesta.txt")

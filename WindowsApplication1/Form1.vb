@@ -48,7 +48,8 @@ Public Class Form1
         command.Parameters.AddRange(params)
 
         cn.Open()
-
+        My.Application.DoEvents()
+        command.CommandTimeout = 0
         command.ExecuteReader()
         mensajeLbl.Text = params(5).Value.ToString
 
@@ -74,10 +75,12 @@ Public Class Form1
 
         If params(4).Value.ToString = "014" Or params(4).Value.ToString = "013" Or params(4).Value.ToString = "012" Then
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./usuario.txt")
             archivo.WriteLine(usuarioTxt.Text)
             archivo.close()
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./grupo.txt")
             archivo.WriteLine(params(2).Value.ToString())
             archivo.close()
@@ -92,14 +95,17 @@ Public Class Form1
 
         ElseIf params(4).Value.ToString = "018" Then
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./usuario.txt")
             archivo.WriteLine(usuarioTxt.Text)
             archivo.close()
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./clave.txt")
             archivo.Write(claveTxt.Text)
             archivo.close()
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./grupo.txt")
             archivo.WriteLine(params(2).Value.ToString())
             archivo.close()
@@ -113,14 +119,17 @@ Public Class Form1
 
         ElseIf params(4).Value.ToString = "019" Then
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./usuario.txt")
             archivo.WriteLine(usuarioTxt.Text)
             archivo.close()
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./clave.txt")
             archivo.Write(claveTxt.Text)
             archivo.close()
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./grupo.txt")
             archivo.WriteLine(params(2).Value.ToString())
             archivo.close()
@@ -134,14 +143,17 @@ Public Class Form1
 
         ElseIf params(4).Value.ToString = "020" Then
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./usuario.txt")
             archivo.WriteLine(usuarioTxt.Text)
             archivo.close()
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./clave.txt")
             archivo.Write(claveTxt.Text)
             archivo.close()
 
+            My.Application.DoEvents()
             archivo = obj.CreateTextFile("./grupo.txt")
             archivo.WriteLine(params(2).Value.ToString())
             archivo.close()

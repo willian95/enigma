@@ -42,9 +42,9 @@ Public Class decodificacionMensaje
         command.CommandText = "DECODE"
 
         command.Parameters.AddRange(params)
-
+        My.Application.DoEvents()
         cn.Open()
-
+        command.CommandTimeout = 0
         Console.WriteLine(params(0).Value.ToString + " 0")
         Console.WriteLine(params(1).Value.ToString + " 1")
         Console.WriteLine(params(2).Value.ToString + " 2")
