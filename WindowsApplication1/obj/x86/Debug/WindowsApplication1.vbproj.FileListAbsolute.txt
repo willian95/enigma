@@ -18,3 +18,36 @@ C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\Windo
 C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.decodificacionMensaje.resources
 C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.consultaMensaje.resources
 C:\Users\willian\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbprojAssemblyReference.cache
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.nombreGrupo.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.registroUsuario.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.cambiarClave.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.menuAdministrador.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.activacionUsuarios.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.eliminarUsuario.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.menuSuperUsuario.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.codificacionMensaje.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.consultaMensaje.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.decodificacionMensaje.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.menuUsuario.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.GenerateResource.cache
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.CoreCompileInputs.cache
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.NoSoyUnRobot.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.enviarCorreo.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.recibirCorreo.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.tarjetaCoordenadas.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.seeTest.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.coordenadas.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.NoSoyUnRobotDecodificar.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.coordenadasDecodificar.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.modificaUsuario.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.seleccionarUsuario.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\WindowsApplication1.firstForm.resources
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\bin\Debug\Enigma.exe
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\bin\Debug\Enigma.pdb
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\bin\Debug\Enigma.xml
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\Enigma.exe
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\Enigma.xml
+C:\Users\willi\Documents\dev\VB\enigma\WindowsApplication1\obj\x86\Debug\Enigma.pdb

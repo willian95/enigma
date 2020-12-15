@@ -1,0 +1,1 @@
+Data Source=DESKTOP-KTKGQOD\SQLEXPRESS;Initial Catalog=ENIGMA000;Integrated Security=True

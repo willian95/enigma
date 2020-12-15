@@ -14,19 +14,16 @@ Public Class eliminarUsuario
         Dim cn As New SqlConnection
         cn.ConnectionString = conexion
 
-        Dim params(3) As SqlParameter
+        Dim params(2) As SqlParameter
 
-        params(0) = New SqlParameter("@NDI", SqlDbType.Char, 8)
+        params(0) = New SqlParameter("@NDI", SqlDbType.Char, 9)
         params(0).Value = identificacionTxt.Text
 
-        params(1) = New SqlParameter("@NAM", SqlDbType.Char, 1500)
+        params(1) = New SqlParameter("@OPT", SqlDbType.Char, 3)
         params(1).Direction = ParameterDirection.Output
 
-        params(2) = New SqlParameter("@OPT", SqlDbType.Char, 3)
+        params(2) = New SqlParameter("@RST", SqlDbType.Char, 100)
         params(2).Direction = ParameterDirection.Output
-
-        params(3) = New SqlParameter("@RST", SqlDbType.Char, 100)
-        params(3).Direction = ParameterDirection.Output
 
         Dim command As New SqlCommand()
         command.Connection = cn
@@ -38,9 +35,9 @@ Public Class eliminarUsuario
         cn.Open()
 
         command.ExecuteReader()
-        mensajeLbl.Text = params(3).Value.ToString
+        mensajeLbl.Text = params(2).Value.ToString
 
-        If params(2).Value.ToString = "500" Then
+        If params(1).Value.ToString = "500" Then
 
             Dim obj As Object
             Dim archivo As Object
@@ -51,7 +48,7 @@ Public Class eliminarUsuario
             End If
 
             archivo = obj.CreateTextFile("./respuesta.txt", True, True)
-            archivo.WriteLine(params(3).Value.ToString)
+            archivo.WriteLine(params(2).Value.ToString)
             archivo.close()
 
             identificacionTxt.Text = ""
@@ -82,6 +79,9 @@ Public Class eliminarUsuario
         If Dir("./usuario.txt") <> "" Then
             My.Computer.FileSystem.DeleteFile("./usuario.txt")
         End If
+        If Dir("./nombre.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./nombre.txt")
+        End If
         If Dir("./respuesta.txt") <> "" Then
             My.Computer.FileSystem.DeleteFile("./respuesta.txt")
         End If
@@ -90,6 +90,50 @@ Public Class eliminarUsuario
         End If
         If Dir("./grupo.txt") <> "" Then
             My.Computer.FileSystem.DeleteFile("./grupo.txt")
+        End If
+
+        If Dir("./accesoSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./accesoSeleccionado.txt")
+        End If
+
+        If Dir("./archivoSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./archivoSeleccionado.txt")
+        End If
+
+        If Dir("./claveSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./claveSeleccionado.txt")
+        End If
+
+        If Dir("./coordenadasPos.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./coordenadasPos.txt")
+        End If
+
+        If Dir("./coordenadasNro.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./coordenadasNro.txt")
+        End If
+
+        If Dir("./correoSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./correoSeleccionado.txt")
+        End If
+
+        If Dir("./grupoSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./grupoSeleccionado.txt")
+        End If
+
+        If Dir("./nombreSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./nombreSeleccionado.txt")
+        End If
+
+        If Dir("./NoSoyUnRobotPos.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./NoSoyUnRobotPos.txt")
+        End If
+
+        If Dir("./NoSoyUnRobotNro.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./NoSoyUnRobotNro.txt")
+        End If
+
+        If Dir("./usuarioSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./usuarioSeleccionado.txt")
         End If
     End Sub
 End Class

@@ -10,7 +10,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
     <RootNamespace>WindowsApplication1</RootNamespace>
-    <AssemblyName>WindowsApplication1</AssemblyName>
+    <AssemblyName>Enigma</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -23,7 +23,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>WindowsApplication1.xml</DocumentationFile>
+    <DocumentationFile>Enigma.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>WindowsApplication1.xml</DocumentationFile>
+    <DocumentationFile>Enigma.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -75,6 +75,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\modificaUsuario.Designer.vb">
+      <DependentUpon>modificaUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\modificaUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\seleccionarUsuario.Designer.vb">
+      <DependentUpon>seleccionarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\seleccionarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Administrador\nombreGrupo.Designer.vb">
       <DependentUpon>nombreGrupo.vb</DependentUpon>
     </Compile>
@@ -95,6 +107,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conectionTxt.vb" />
+    <Compile Include="firstForm.Designer.vb">
+      <DependentUpon>firstForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="firstForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +130,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -122,6 +141,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MyPanel.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SuperUsuario\activacionUsuarios.Designer.vb">
       <DependentUpon>activacionUsuarios.vb</DependentUpon>
@@ -153,10 +175,28 @@
     <Compile Include="Usuario\consultaMensaje.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Usuario\coordenadasDecodificar.Designer.vb">
+      <DependentUpon>coordenadasDecodificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\coordenadasDecodificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Usuario\decodificacionMensaje.Designer.vb">
       <DependentUpon>decodificacionMensaje.vb</DependentUpon>
     </Compile>
     <Compile Include="Usuario\decodificacionMensaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\enviarCorreo.Designer.vb">
+      <DependentUpon>enviarCorreo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\enviarCorreo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\coordenadas.Designer.vb">
+      <DependentUpon>coordenadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\coordenadas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Usuario\menuUsuario.Designer.vb">
@@ -165,8 +205,44 @@
     <Compile Include="Usuario\menuUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Usuario\NoSoyUnRobot.Designer.vb">
+      <DependentUpon>NoSoyUnRobot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\NoSoyUnRobot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\NoSoyUnRobotDecodificar.Designer.vb">
+      <DependentUpon>NoSoyUnRobotDecodificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\NoSoyUnRobotDecodificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\recibirCorreo.Designer.vb">
+      <DependentUpon>recibirCorreo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\recibirCorreo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\seeTest.Designer.vb">
+      <DependentUpon>seeTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\seeTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\tarjetaCoordenadas.Designer.vb">
+      <DependentUpon>tarjetaCoordenadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\tarjetaCoordenadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Administrador\modificaUsuario.resx">
+      <DependentUpon>modificaUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\seleccionarUsuario.resx">
+      <DependentUpon>seleccionarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\nombreGrupo.resx">
       <DependentUpon>nombreGrupo.vb</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cambiarClave.resx">
       <DependentUpon>cambiarClave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="firstForm.resx">
+      <DependentUpon>firstForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -203,11 +282,35 @@
     <EmbeddedResource Include="Usuario\consultaMensaje.resx">
       <DependentUpon>consultaMensaje.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\coordenadasDecodificar.resx">
+      <DependentUpon>coordenadasDecodificar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuario\decodificacionMensaje.resx">
       <DependentUpon>decodificacionMensaje.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\enviarCorreo.resx">
+      <DependentUpon>enviarCorreo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\coordenadas.resx">
+      <DependentUpon>coordenadas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuario\menuUsuario.resx">
       <DependentUpon>menuUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\NoSoyUnRobot.resx">
+      <DependentUpon>NoSoyUnRobot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\NoSoyUnRobotDecodificar.resx">
+      <DependentUpon>NoSoyUnRobotDecodificar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\recibirCorreo.resx">
+      <DependentUpon>recibirCorreo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\seeTest.resx">
+      <DependentUpon>seeTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\tarjetaCoordenadas.resx">
+      <DependentUpon>tarjetaCoordenadas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

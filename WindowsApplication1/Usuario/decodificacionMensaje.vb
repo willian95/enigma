@@ -15,13 +15,13 @@ Public Class decodificacionMensaje
 
         Dim params(5) As SqlParameter
 
-        params(0) = New SqlParameter("@EMI", SqlDbType.Char, 8)
+        params(0) = New SqlParameter("@EMI", SqlDbType.Char, 9)
         params(0).Value = emisorTxt.Text
 
-        params(1) = New SqlParameter("@DST", SqlDbType.Char, 8)
+        params(1) = New SqlParameter("@DST", SqlDbType.Char, 9)
         params(1).Value = destinatarioTxt.Text
 
-        params(2) = New SqlParameter("@NRO", SqlDbType.Char, 8)
+        params(2) = New SqlParameter("@NRO", SqlDbType.Char, 9)
         params(2).Value = numeroMensajeTxt.Text
 
         params(3) = New SqlParameter("@TEX", SqlDbType.Char, 7500)
@@ -51,6 +51,7 @@ Public Class decodificacionMensaje
 
         command.ExecuteReader()
         mensajeLbl.Text = params(5).Value.ToString
+
 
         Console.WriteLine(params(3).Value.ToString + " 3")
         mensajeTxt.Text = params(3).Value.ToString
@@ -98,6 +99,11 @@ Public Class decodificacionMensaje
         emisorTxt.Text = ""
         numeroMensajeTxt.Text = ""
         mensajeTxt.Text = ""
+        mensajeLbl.Text = ""
+
+        If Dir("./respuesta.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./respuesta.txt")
+        End If
 
         Me.Hide()
         Form1.Show()
@@ -107,6 +113,9 @@ Public Class decodificacionMensaje
         If Dir("./usuario.txt") <> "" Then
             My.Computer.FileSystem.DeleteFile("./usuario.txt")
         End If
+        If Dir("./nombre.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./nombre.txt")
+        End If
         If Dir("./respuesta.txt") <> "" Then
             My.Computer.FileSystem.DeleteFile("./respuesta.txt")
         End If
@@ -115,6 +124,69 @@ Public Class decodificacionMensaje
         End If
         If Dir("./grupo.txt") <> "" Then
             My.Computer.FileSystem.DeleteFile("./grupo.txt")
+        End If
+
+        If Dir("./accesoSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./accesoSeleccionado.txt")
+        End If
+
+        If Dir("./archivoSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./archivoSeleccionado.txt")
+        End If
+
+        If Dir("./claveSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./claveSeleccionado.txt")
+        End If
+
+        If Dir("./coordenadasPos.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./coordenadasPos.txt")
+        End If
+
+        If Dir("./coordenadasNro.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./coordenadasNro.txt")
+        End If
+
+        If Dir("./correoSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./correoSeleccionado.txt")
+        End If
+
+        If Dir("./grupoSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./grupoSeleccionado.txt")
+        End If
+
+        If Dir("./nombreSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./nombreSeleccionado.txt")
+        End If
+
+        If Dir("./NoSoyUnRobotPos.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./NoSoyUnRobotPos.txt")
+        End If
+
+        If Dir("./NoSoyUnRobotNro.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./NoSoyUnRobotNro.txt")
+        End If
+
+        If Dir("./usuarioSeleccionado.txt") <> "" Then
+            My.Computer.FileSystem.DeleteFile("./usuarioSeleccionado.txt")
+        End If
+    End Sub
+
+    Private Sub Button1_VisibleChanged(sender As Object, e As EventArgs) Handles Button1.VisibleChanged
+
+    End Sub
+
+    Private Sub decodificacionMensaje_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
+        mensajeTxt.Text = ""
+        numeroMensajeTxt.Text = ""
+        destinatarioTxt.Text = ""
+        emisorTxt.Text = ""
+        numeroMensajeTxt.Text = ""
+
+        Dim texto As String
+        If Dir("./usuario.txt") <> "" Then
+            texto = My.Computer.FileSystem.ReadAllText("./usuario.txt") 'System.AppDomain.CurrentDomain.BaseDirectory
+            'Console.WriteLine(texto)
+            destinatarioTxt.Text = texto
         End If
     End Sub
 End Class
